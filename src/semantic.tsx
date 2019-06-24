@@ -100,8 +100,8 @@ export const widthFactory = (userAgent?: string) => {
 }
 
 export const MediaQuery = (props: JsxProps) => {
-    const { type, children, as } = props;
-    const propsToPass = { children, as = React.Fragment };
+    const { type, children, as = React.Fragment } = props;
+    const propsToPass = { children, as };
     switch (type) {
         case mobileScreen: {
             return MobileContainer(propsToPass);
