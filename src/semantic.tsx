@@ -24,7 +24,7 @@ const DesktopContainer = (props: JsxProps) => {
     const context : WindowWidthContext = React.useContext(Window_SuiM_Context);
     return (
         <Responsive fireOnMount getWidth={context.getWidth}
-            as={React.Fragment}
+            as={props.as}
             minWidth={Responsive.onlyComputer.minWidth}>
             {props.children}
         </Responsive>
@@ -35,7 +35,7 @@ const TabletContainer = (props: JsxProps) => {
     const context : WindowWidthContext = React.useContext(Window_SuiM_Context);
     return (
         <Responsive fireOnMount getWidth={context.getWidth}
-            as={React.Fragment}
+            as={props.as}
             minWidth={Responsive.onlyTablet.minWidth}
             maxWidth={Responsive.onlyTablet.maxWidth} >
             {props.children}
@@ -47,7 +47,7 @@ const MobileContainer = (props: JsxProps) => {
     const context : WindowWidthContext = React.useContext(Window_SuiM_Context);
     return (
         <Responsive fireOnMount getWidth={context.getWidth}
-            as={React.Fragment}
+            as={props.as}
             maxWidth={Responsive.onlyMobile.maxWidth} >
             {props.children}
         </Responsive>
@@ -58,7 +58,7 @@ const DesktopAndTabletContainer = (props: JsxProps) => {
     const context : WindowWidthContext = React.useContext(Window_SuiM_Context);
     return (
         <Responsive fireOnMount getWidth={context.getWidth}
-            as={React.Fragment}
+            as={props.as}
             minWidth={Responsive.onlyTablet.minWidth}
             maxWidth={Responsive.onlyComputer.maxWidth} >
             {props.children}
@@ -70,7 +70,7 @@ const MobileAndTabletContainer = (props: JsxProps) => {
     const context : WindowWidthContext = React.useContext(Window_SuiM_Context);
     return (
         <Responsive fireOnMount getWidth={context.getWidth}
-            as={React.Fragment}
+            as={props.as}
             maxWidth={Responsive.onlyTablet.maxWidth} >
             {props.children}
         </Responsive>
@@ -100,8 +100,8 @@ export const widthFactory = (userAgent?: string) => {
 }
 
 export const MediaQuery = (props: JsxProps) => {
-    const { type, children } = props;
-    const propsToPass = { children };
+    const { type, children, as } = props;
+    const propsToPass = { children, as = React.Fragment };
     switch (type) {
         case mobileScreen: {
             return MobileContainer(propsToPass);
