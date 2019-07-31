@@ -10,5 +10,16 @@
     },
     "include": [
         "./src/**/*"
-    ]
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useBabel": true,
+        "babelOptions": {
+            "babelrc": false,
+            "presets": [
+                ["@babel/preset-env", { "modules": false }]
+            ],
+            "plugins": ["transform-semantic-ui-react-imports"]
+        },
+        "babelCore": "@babel/core"
+    }
 }
