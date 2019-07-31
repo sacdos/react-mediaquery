@@ -1,14 +1,12 @@
 import * as React from 'react';
 import * as MobileDetect from 'mobile-detect';
-import * as SemanticUI from 'semantic-ui-react';
+import { Responsive } from 'semantic-ui-react';
 import {
     mobileScreen, tabletScreen,
     mobileAndTablet, desktopScreen,
     Window_SuiM_Context,
     WindowWidthContext
 } from './constants';
-
-const { Responsive } = SemanticUI;
 
 interface PropsInit {
     isPhoneFromSSR: boolean
