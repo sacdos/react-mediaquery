@@ -39,6 +39,7 @@
     "@types/react-dom": "^16.8.4",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^24.7.1",
+    "babel-plugin-transform-semantic-ui-react-imports": "^1.4.1",
     "jest": "^24.7.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^5.3.3",
