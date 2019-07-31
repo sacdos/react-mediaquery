@@ -1,8 +1,11 @@
 {
   "presets": [
-    ["env", {
-      "modules": false
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
   ],
   "plugins": ["transform-semantic-ui-react-imports"]
 }
