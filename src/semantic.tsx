@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as MobileDetect from 'mobile-detect';
-import { Responsive } from 'semantic-ui-react';
+import Responsive from 'semantic-ui-react/Responsive';
 import {
     mobileScreen, tabletScreen,
     mobileAndTablet, desktopScreen,
